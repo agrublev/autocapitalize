@@ -14,7 +14,7 @@
     $.autocapitalize_helper = function($th, type){
         type = type || $th.attr("autocapitalize");
         $th.on("keyup", function(e) {
-            var inp = String.fromCharCode(event.keyCode);
+            var inp = String.fromCharCode(e.keyCode);
             if (/[a-zA-Z0-9-_ ]/.test(inp)) {
                 var val = $th.val().toLowerCase();
                 if ( type === "words" || type === "sentences" ) {
